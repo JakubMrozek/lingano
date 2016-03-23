@@ -1,0 +1,16 @@
+{
+  "name": "lingano",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Experimental project without any npm dependencies.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JakubMrozek/lingano.git"
+  },
+  "author": "Jakub Mrozek",
+  "homepage": "https://github.com/JakubMrozek/lingano#readme"
+}
