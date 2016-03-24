@@ -5,36 +5,48 @@ const config = require('./config.js')
 
 
 // libs
-function contentType(mimeType) {
-  return {'Content-Type': mimeType}
+function getContentType(contentType) {
+  return {'Content-Type': contentType}
 }
 
-function setHtmlHeader(response, statusCode) {
-  response.writeHead(statusCode, contentType('text/html'))
+function setHeaders(response, statusCode, contentType) {
+  response.writeHead(statusCode, getContentType(contentType))
 }
 
-function getTemplatePath(name) {
-  return `${__dirname}/templates/${name}.html`
+function render(response, folder, templateName) {
+  fs.createReadStream(`${folder}/${templateName}`).pipe(response)
 }
 
-function renderHtml(response, statusCode, templateName) {
-  setHtmlHeader(response, statusCode)
-  fs.createReadStream(getTemplatePath(templateName)).pipe(response)
+function configureRender(folder, contentType) {
+  return function renderTemplate(response, statusCode, fileName) {
+    setHeaders(response, statusCode, contentType)
+    render(response, folder, fileName)
+  }
 }
+
+
+const renderCss = configureRender(`${__dirname}/public`, 'text/css')
+const renderHtml = configureRender(`${__dirname}/templates`, 'text/html')
 
 
 function router(request, response) {
   switch (request.url) {
 
-    // hmlt pages
-    case '/': {
-      renderHtml(response, 200, 'index')
+    // css
+    case '/default.css': {
+      renderCss(response, 200, 'default.css')
       break
     }
-    
+
+    // hmlt pages
+    case '/': {
+      renderHtml(response, 200, 'index.html')
+      break
+    }
+
     // error
     default: {
-      renderHtml(response, 404, 'error404')
+      renderHtml(response, 200, 'error404.html')
     }
   }
 }
