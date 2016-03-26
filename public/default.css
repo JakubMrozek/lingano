@@ -35,6 +35,26 @@ footer {
   font-size: 80%;
 }
 
+a {
+  color: #424242;
+  border-bottom: 1px solid #9e9e9e;
+  text-decoration: none;
+}
+
+a:hover {
+  background-color: #424242;
+  color: white;
+}
+
+ul {
+  padding-left: 0;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 3px;
+}
+
 @media (min-width: 700px) {
   .content, footer .container {
     width: 700px;

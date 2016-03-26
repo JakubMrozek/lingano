@@ -1,7 +1,7 @@
 const {el} = require('../lib/render')
 
-function layout(title, content) {
 
+const Layout = ({title}, content) => {
   const head = el('head', null, [
     el('title', null, title),
     el('meta', {charset: 'utf-8'}),
@@ -19,8 +19,10 @@ function layout(title, content) {
     ])
   ])
 
-  return el('html', {lang: 'cs'}, [head, body])
+  return (
+    el('html', {lang: 'cs'}, [head, body])
+  )
 }
 
 
-module.exports = layout
+module.exports = Layout
