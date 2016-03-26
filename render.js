@@ -1,22 +1,27 @@
-const fs = require('fs')
-
-function setHeaders(response, statusCode, contentType) {
-  response.writeHead(statusCode, {
-    'Content-Type': contentType
-  })
+function element(name, attrs = null, children = []) {
+  return {name, attrs, children}
 }
 
-function render(response, folder, templateName) {
-  fs.createReadStream(`${folder}/${templateName}`).pipe(response)
+function renderAttrs(attrs) {
+  return Object.keys(attrs || {}).map((key) => (
+    ` ${key}="${attrs[key]}"`
+  ))
 }
 
-function configureRender(folder, contentType) {
-  return function renderTemplate(response, statusCode, fileName) {
-    setHeaders(response, statusCode, contentType)
-    render(response, folder, fileName)
+function render({name, attrs, children}) {
+  var html = `<${name}`
+  html+= renderAttrs(attrs)
+  html += '>'
+  if (Array.isArray(children)) {
+    //map is much slower then for loop, but i love it:-)
+    html += children.map(render).join('')
+  } else {
+    html += children
   }
+  html += `</${name}>`
+  return html
 }
 
-
-exports.css = configureRender(`${__dirname}/public`, 'text/css')
-exports.html = configureRender(`${__dirname}/templates`, 'text/html')
+exports.element = element
+exports.el = element
+exports.render = render

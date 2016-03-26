@@ -7,5 +7,8 @@ Experimental project without any npm dependencies.
 # Run!
 
 ```
-node --harmony_destructuring server.js
+node --harmony_destructuring --harmony_default_parameters server.js
+
+//tests
+node --harmony_destructuring --harmony_default_parameters tests
 ```
