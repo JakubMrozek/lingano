@@ -1,5 +1,5 @@
 const {el} = require('../../lib/render')
-const Layout = require('../Layout.component')
+const Layout = require('../Layout')
 
 const Error404 = () => (
   Layout({title: 'Lingano - Stránka nenalezena'}, [
