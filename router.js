@@ -1,8 +1,8 @@
-const {configureRender} = require('./static')
+const {configureRender} = require('./lib/static')
 const css = configureRender(`${__dirname}/public`)
 
-const homepage = require('./actions/homepage')
-const error404 = require('./actions/error404')
+const homepage = require('./pages/homepage')
+const error404 = require('./pages/error404')
 
 
 function router(request, response) {

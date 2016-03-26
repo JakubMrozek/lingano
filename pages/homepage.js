@@ -1,4 +1,4 @@
-const {el, render} = require('../render')
+const {el, render} = require('../lib/render')
 const layout = require('./layout')
 
 

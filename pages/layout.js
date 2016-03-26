@@ -1,4 +1,4 @@
-const {el} = require('../render')
+const {el} = require('../lib/render')
 
 function layout(title, content) {
 

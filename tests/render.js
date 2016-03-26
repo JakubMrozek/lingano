@@ -1,5 +1,5 @@
 const assert = require('assert')
-const {render, el} = require('../render')
+const {render, el} = require('../lib/render')
 
 // render html
 const elementA = el('a')
