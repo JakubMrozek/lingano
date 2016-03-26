@@ -1,5 +1,5 @@
 const {el} = require('../../lib/render')
-const Layout = require('../Layout')
+const Layout = require('../Layout.component')
 
 const Homepage = () => (
   Layout({title: 'Lingano - Homepage'}, [
