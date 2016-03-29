@@ -7,7 +7,10 @@ Experimental project without any npm dependencies.
 
 # Notes
 
-* no `this` keyword, no classes
+* No `this` keyword
+* No classes
+* No external npm dependencies
+* React style view components
 
 
 # Run!
