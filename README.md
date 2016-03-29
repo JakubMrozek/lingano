@@ -1,6 +1,6 @@
 # Lingano
 
-Experimental project without any npm dependencies.
+Experimental project without any npm dependencies. Just for fun.
 
 [lingano.com](http://www.lingano.com)
 
@@ -9,17 +9,13 @@ Experimental project without any npm dependencies.
 
 * No `this` keyword
 * No classes
-* React style view components
 * No external npm dependencies
+* React style view components
 
 
 # Run!
 
-```
-node --harmony_destructuring --harmony_default_parameters server.js
-```
-
-# Tests
-```
-node --harmony_destructuring --harmony_default_parameters tests
-```
+* `npm run start`
+* `npm run start-dev` (with nodemon)
+* `npm run test`
+* `npm run watch` (with nodemon)

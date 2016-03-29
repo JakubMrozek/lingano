@@ -1,22 +1,27 @@
-const {el} = require('../../lib/render')
+const {el, c} = require('../../lib/render')
 const Layout = require('../Layout')
 
-const Homepage = () => (
-  Layout({title: 'Lingano - Homepage'}, [
-    el('h1', null, 'Lingano'),
-    el('p', null, 'Tady jednou něco bude.'),
-    el('ul', null, [
-      el('li', null, [
-        el('a', {href: '/tester'}, 'Spustit testování')
-      ]),
-      el('li', null, [
-        el('a', {href: '/lists'}, 'Seznamy')
-      ]),
-      el('li', null, [
-        el('a', {href: '/lists/new'}, 'Vytvořit nový seznam')
+
+const List = ({href}, children) => {
+  return (
+    el('li', null, [
+      el('a', {href}, children)
+    ])
+  )
+}
+
+const Homepage = () => {
+  return (
+    c(Layout, {title: 'Lingano - Homepage'}, [
+      el('h1', null, 'Lingano'),
+      el('p', null, 'Tady jednou něco bude.'),
+      el('ul', null, [
+        c(List, {href: '/lists'}, 'Seznamy'),
+        c(List, {href: '/lists/now'}, 'Vytvořit nový seznam')
       ])
     ])
-  ])
-)
+  )
+}
+
 
 module.exports = Homepage
