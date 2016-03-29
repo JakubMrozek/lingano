@@ -1,6 +1,5 @@
 const http = require('http')
+const {PORT} = require('./config')
+const router = require('./router')
 
-const config = require('./config.js')
-const router = require('./router.js')
-
-http.createServer(router).listen(config.PORT)
+http.createServer(router).listen(PORT)
