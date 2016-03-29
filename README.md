@@ -11,6 +11,7 @@ Experimental project without any npm dependencies. Just for fun.
 * No classes
 * No external npm dependencies
 * React style view components
+* Mocha style tests
 
 
 # Run!
