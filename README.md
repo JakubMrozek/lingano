@@ -1,5 +1,7 @@
 # Lingano
 
+[![Circle CI](https://circleci.com/gh/JakubMrozek/lingano.svg?style=svg)](https://circleci.com/gh/JakubMrozek/lingano)
+
 Experimental project without any npm dependencies. Just for fun.
 
 [lingano.com](http://www.lingano.com)
