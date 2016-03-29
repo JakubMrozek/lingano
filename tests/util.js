@@ -1,24 +1,36 @@
-const {equal} = require('assert')
 const util = require('../lib/util')
 
+describe('lib/util')
 
-equal(util.isObject({}), true)
-equal(util.isObject(), false)
-equal(util.isObject(function(){}), false)
-equal(util.isObject(null), false)
+it ('is object', () => {
+  equals(util.isObject({}), true)
+  equals(util.isObject(), false)
+  equals(util.isObject(function(){}), false)
+  equals(util.isObject(null), false)
+})
 
-equal(util.isString('test'), true)
-equal(util.isString(42), false)
+it ('is string', () => {
+  equals(util.isString('test'), true) 
+  equals(util.isString(42), false)
+})
 
-equal(util.isFunction(x => x), true)
-equal(util.isFunction({}), false)
+it ('is function', () => {
+  equals(util.isFunction(x => x), true)
+  equals(util.isFunction({}), false)
+})
 
-equal(util.isUndefined(undefined), true)
-equal(util.isUndefined({}), false)
+it ('is undefined', () => {
+  equals(util.isUndefined(undefined), true)
+  equals(util.isUndefined({}), false)
+})
 
-equal(util.isDefined({}), true)
-equal(util.isDefined(undefined), false)
+it ('is defined', () => {
+  equals(util.isDefined({}), true)
+  equals(util.isDefined(undefined), false)
+})
 
-equal(util.isNullOrUndefined(undefined), true)
-equal(util.isNullOrUndefined(null), true)
-equal(util.isNullOrUndefined('test'), false)
+it ('is null or undefined', () => {
+  equals(util.isNullOrUndefined(undefined), true)
+  equals(util.isNullOrUndefined(null), true)
+  equals(util.isNullOrUndefined('test'), false)
+})

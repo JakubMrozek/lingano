@@ -1,2 +1,0 @@
-require('./render')
-require('./util')
