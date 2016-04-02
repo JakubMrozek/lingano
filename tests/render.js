@@ -1,7 +1,5 @@
 const {render, el, c} = require('../lib/render')
 
-describe('lib/render')
-
 it ('should render tree', () => {
   const elementA = el('a')
   const elementB = el('b', {x: 12}, 'my text')
