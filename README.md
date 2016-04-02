@@ -1,10 +1,8 @@
-# Lingano
-
 [![Circle CI](https://circleci.com/gh/JakubMrozek/lingano.svg?style=svg)](https://circleci.com/gh/JakubMrozek/lingano)
 
-Experimental project without any npm dependencies. Just for fun.
+# Lingano
 
-[lingano.com](http://www.lingano.com)
+Experimental project without any npm dependencies. Just for fun.
 
 
 # Notes
@@ -31,4 +29,4 @@ Experimental project without any npm dependencies. Just for fun.
 
 # Tips
 
-* use `Object.keys()` instead of `for in` loop
+* use `Object.keys()` instead of `for in` loop (it is faster)

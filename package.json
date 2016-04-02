@@ -5,10 +5,12 @@
   "description": "Experimental project without any npm dependencies.",
   "main": "server.js",
   "scripts": {
-    "start": "node --harmony_destructuring --harmony_default_parameters server.js",
-    "start-dev": "nodemon --harmony_destructuring --harmony_default_parameters server.js",
-    "test": "node --harmony_destructuring --harmony_default_parameters tests/config.js",
-    "test-watch": "nodemon --harmony_destructuring --harmony_default_parameters tests/config.js"
+    "node": "node --harmony_destructuring --harmony_default_parameters",
+    "nodemon": "nodemon --harmony_destructuring --harmony_default_parameters",
+    "start": "npm run node server.js",
+    "start-dev": "npm run nodemon server.js",
+    "test": "npm run node scripts/tests.js",
+    "test-watch": "npm run nodemon scripts/tests.js"
   },
   "repository": {
     "type": "git",
