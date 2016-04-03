@@ -38,5 +38,15 @@ it ('should compose functions', () => {
   const fn2 = (arg) => `${arg}2`
   const fn3 = (arg) => `${arg}3`
   const fn4 = util.compose(fn3, fn2, fn1)
-  equals(fn4(0), '0123') 
+  equals(fn4(0), '0123')
+})
+
+it ('should map values', () => {
+  const square = util.map((a) => a * 2)
+  equals(square([1, 2, 3]), [2, 4, 6])
+})
+
+it ('should join values', () => {
+  const joinBySpace = util.join(' ')
+  equals(joinBySpace([1, 2, 3]), '1 2 3')
 })

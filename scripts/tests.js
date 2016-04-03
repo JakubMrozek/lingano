@@ -16,8 +16,16 @@ function loadTestFile(name) {
   require(`${directory}/${name}`)
 }
 
+// hack, assert doesnt support arrays
+function equals(actual, expected, message) {
+  if (Array.isArray(actual) && Array.isArray(expected)) {
+    return assert.equal(actual.toString(), expected.toString(), message)
+  }
+  return assert.equal(actual, expected, message)
+}
+
 global.assert = assert
-global.equals = assert.equal
+global.equals = equals
 global.it = it
 
 fs.readdirSync(directory).forEach(loadTestFile)
