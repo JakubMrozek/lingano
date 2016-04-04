@@ -53,5 +53,5 @@ it ('should join values', () => {
 
 it ('should repeat values', () => {
   const repeatStars = util.repeat('*')
-  equals(repeatStars(3), '****')
+  equals(repeatStars(3), '***')
 })
