@@ -50,3 +50,8 @@ it ('should join values', () => {
   const joinBySpace = util.join(' ')
   equals(joinBySpace([1, 2, 3]), '1 2 3')
 })
+
+it ('should repeat values', () => {
+  const repeatStars = util.repeat('*')
+  equals(repeatStars(3), '***')
+})

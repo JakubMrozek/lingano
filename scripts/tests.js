@@ -1,7 +1,7 @@
 const assert = require('assert')
 const fs = require('fs')
 const path = require('path')
-const {run} = require('../lib/test-runner/runner')
+const {run} = require('../lib/runner')
 
 const directory = path.join(__dirname, '..', 'tests')
 const tests = []
@@ -17,6 +17,7 @@ function loadTestFile(name) {
 }
 
 // hack, assert doesnt support arrays
+// todo better solution
 function equals(actual, expected, message) {
   if (Array.isArray(actual) && Array.isArray(expected)) {
     return assert.equal(actual.toString(), expected.toString(), message)
