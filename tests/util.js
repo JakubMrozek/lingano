@@ -17,7 +17,7 @@ it ('should be function', () => {
   equals(util.isFunction({}), false)
 })
 
-it ('should be ndefined', () => {
+it ('should be undefined', () => {
   equals(util.isUndefined(undefined), true)
   equals(util.isUndefined({}), false)
 })
@@ -53,5 +53,5 @@ it ('should join values', () => {
 
 it ('should repeat values', () => {
   const repeatStars = util.repeat('*')
-  equals(repeatStars(3), '***')
+  equals(repeatStars(3), '****')
 })
