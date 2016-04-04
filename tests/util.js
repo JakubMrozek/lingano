@@ -55,3 +55,7 @@ it ('should repeat values', () => {
   const repeatStars = util.repeat('*')
   equals(repeatStars(3), '***')
 })
+
+it ('should get last value', () => {
+  equals(util.last(['a', 'b', 'c']), 'c')
+})
