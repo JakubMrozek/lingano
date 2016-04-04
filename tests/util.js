@@ -36,7 +36,7 @@ it ('should be null or undefined', () => {
 it ('should compose functions', () => {
   const fn1 = (arg) => `${arg}1`
   const fn2 = (arg) => `${arg}2`
-  const fn3 = (arg) => `${arg}32` //exc
+  const fn3 = (arg) => `${arg}3`
   const fn4 = util.compose(fn3, fn2, fn1)
   equals(fn4(0), '0123')
 })
