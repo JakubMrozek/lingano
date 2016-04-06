@@ -1,7 +1,7 @@
 const assert = require('assert')
 const fs = require('fs')
 const path = require('path')
-const {run} = require('../lib/runner')
+const {run} = require('../lib/test-runner')
 const {last} = require('../lib/util')
 
 const directory = path.join(__dirname, '..', 'tests')

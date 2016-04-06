@@ -5,8 +5,8 @@
   "description": "Experimental project without any npm dependencies.",
   "main": "server.js",
   "scripts": {
-    "node": "node --use_strict --harmony_destructuring --harmony_default_parameters --harmony_rest_parameters",
-    "nodemon": "nodemon --use_strict --harmony_destructuring --harmony_default_parameters --harmony_rest_parameters",
+    "node": "node --use_strict --harmony_destructuring --harmony_default_parameters --harmony_rest_parameters --harmony_array_includes",
+    "nodemon": "nodemon --use_strict --harmony_destructuring --harmony_default_parameters --harmony_rest_parameters --harmony_array_includes",
     "start": "npm run node server.js",
     "start-dev": "npm run nodemon server.js",
     "test": "npm run node scripts/tests.js",
