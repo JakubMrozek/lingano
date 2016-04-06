@@ -1,8 +1,8 @@
 const {el, c} = require('../../lib/render')
-const Layout = require('../Layout')
+const Layout = require('../Layout.component')
 
 
-const Error404 = () => {
+const Page = () => {
   return (
     c(Layout, {title: 'Lingano - Stránka nenalezena'}, [
       el('h1', null, 'Stránka nebyla nalezena.')
@@ -11,4 +11,4 @@ const Error404 = () => {
 }
 
 
-module.exports = Error404
+module.exports = Page

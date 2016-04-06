@@ -1,5 +1,5 @@
 const {el, c} = require('../../lib/render')
-const Layout = require('../Layout')
+const Layout = require('../Layout.component')
 
 
 const List = ({href}, children) => {
@@ -10,7 +10,7 @@ const List = ({href}, children) => {
   )
 }
 
-const Homepage = () => {
+const Page = () => {
   return (
     c(Layout, {title: 'Lingano - Homepage'}, [
       el('h1', null, 'Lingano'),
@@ -24,4 +24,4 @@ const Homepage = () => {
 }
 
 
-module.exports = Homepage
+module.exports = Page

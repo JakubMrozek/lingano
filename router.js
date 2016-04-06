@@ -2,9 +2,10 @@ const {configureRender} = require('./lib/static')
 const css = configureRender(`${__dirname}/public`)
 const {render} = require('./lib/render')
 
-const Homepage = require('./pages/Homepage/Page')
-const Error404 = require('./pages/Error404/Page')
-const Lists = require('./pages/Lists/Page')
+//actions
+const homepage = require('./actions/homepage')
+const error404 = require('./actions/error404')
+const lists = require('./actions/lists')
 
 
 function router(request, response) {
@@ -18,17 +19,17 @@ function router(request, response) {
 
     // hmlt pages
     case '/': {
-      response.end(render(Homepage()))
+      homepage({request, response, render})
       break
     }
     case '/lists': {
-      response.end(render(Lists()))
+      lists({request, response, render})
       break
     }
 
     // error
     default: {
-      response.end(render(Error404()))
+      error404({request, response, render})
       break
     }
   }
