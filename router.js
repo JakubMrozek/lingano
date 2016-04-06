@@ -3,9 +3,9 @@ const css = configureRender(`${__dirname}/public`)
 const {render} = require('./lib/render')
 
 //actions
-const homepage = require('./actions/homepage')
-const error404 = require('./actions/error404')
-const lists = require('./actions/lists')
+const homepage = require('./modules/homepage')
+const error404 = require('./modules/error404')
+const lists = require('./modules/lists')
 
 
 function router(request, response) {
