@@ -1,4 +1,4 @@
-const {render, el, c} = require('../lib/render')
+const {render, el, c} = require('../lib/view')
 
 it ('should render tree', () => {
   const elementA = el('a')
@@ -10,13 +10,4 @@ it ('should render tree', () => {
 it ('should render component', () => {
   const componentA = ({x}, children) => `${x}-${children}`
   equals(c(componentA, {x: 42}, 'some text'), '42-some text')
-})
-
-it ('should render component as object', () => {
-  const componentB = {
-    render({x}, children) {
-      return `${x}-${children}`
-    }
-  }
-  equals(c(componentB, {x: 42}, 'some text'), '42-some text')
 })

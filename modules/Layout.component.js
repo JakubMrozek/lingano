@@ -1,4 +1,4 @@
-const {el} = require('../lib/render')
+const {el} = require('../lib/view')
 
 
 const Layout = ({title}, content) => {
