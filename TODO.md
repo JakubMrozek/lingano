@@ -1,8 +1,7 @@
 # TODO
 
 ## High priority
-* rewrite lib/render.js (-> template)
-* rewrite lib/static.js
+* tests for router, serve and static
 
 ## Low priority
 * styles
