@@ -1,7 +1,7 @@
 # TODO
 
 ## High priority
-* tests for router, serve and static
+
 
 ## Low priority
 * styles
@@ -9,3 +9,4 @@
 * favicon
 * komprese
 * hlavičky pro cachování
+* tests for router, serve and static
