@@ -1,12 +1,10 @@
-const {el, c} = require('../../lib/view')
+const {el, c} = require('../util')
 const Layout = require('../Layout.component')
 
 
-const List = ({id, name}) => {
-  return (
-    el('div', null, `${id}: ${name}`)
-  )
-}
+const List = ({id, name}) => (
+  el('div', null, `${id}: ${name}`)
+)
 
 const Lists = ({lists}) => {
   if (lists.length === 0) {
@@ -19,14 +17,12 @@ const Lists = ({lists}) => {
   )
 }
 
-const Page = ({lists}) => {
-  return (
-    c(Layout, {title: 'Lingano - Lists'}, [
-      el('h1', null, 'Moje seznamy'),
-      c(Lists, {lists})
-    ])
-  )
-}
+const Page = ({lists}) => (
+  c(Layout, {title: 'Lingano - Lists'}, [
+    el('h1', null, 'Moje seznamy'),
+    c(Lists, {lists})
+  ])
+)
 
 
 module.exports = Page

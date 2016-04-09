@@ -1,9 +1,10 @@
+const {render} = require('../util')
 const Page = require('./Page.component')
 const {loadLists} = require('./actions')
 
 
-module.exports = function lists({render, response}) {
+module.exports = function lists({serve}) {
   loadLists().then((lists) => {
-    response.end(render(Page({lists})))
+    serve(render(Page({lists})))
   })
 }
